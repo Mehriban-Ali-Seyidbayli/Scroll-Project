@@ -1,0 +1,264 @@
+     @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+     html {
+         scroll-behavior: smooth;
+     }
+     
+     *,
+      ::after,
+      ::before {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+     }
+     
+     body {
+         font-family: "Roboto", sans-serif;
+         background-color: rgb(252, 246, 246);
+         line-height: 1.5;
+     }
+     
+     ul {
+         list-style-type: none;
+     }
+     
+     a {
+         text-decoration: none;
+     }
+     
+     h1 {
+         letter-spacing: 0.25rem;
+         text-transform: capitalize;
+         font-family: "Roboto", sans-serif;
+         font-size: 3rem;
+     }
+     
+     nav {
+         background-color: rgb(247, 242, 242);
+         padding: 1rem 1.5rem;
+     }
+     
+     .fixed-nav {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         background-color: rgb(247, 242, 242);
+         box-shadow: 0 5px 15px rgb(168, 165, 165);
+     }
+     
+     .fixed-nav .links a {
+         color: rgb(53, 52, 52);
+         text-decoration: none;
+     }
+     
+     .fixed-nav .links a:hover {
+         color: #39A894;
+     }
+     
+     .nav-header {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+     }
+     
+     .nav-toggle {
+         font-size: 1.5rem;
+         color: rgb(46, 45, 45);
+         background: transparent;
+         border-color: transparent;
+         transition: all 0.3s linear;
+         cursor: pointer;
+     }
+     
+     .nav-toggle:hover {
+         color: rgb(1, 141, 99);
+     }
+     
+     .logo {
+         height: 50px;
+     }
+     
+     img:not(.logo) {
+         width: 100%;
+     }
+     
+     .links-container {
+         height: 0;
+         overflow: hidden;
+         transition: all 0.3s linear;
+     }
+     
+     .show-links {
+         height: 200px;
+     }
+     
+     .links a {
+         background-color: rgb(252, 246, 246);
+         color: rgb(53, 52, 52);
+         font-size: 1.1rem;
+         text-transform: capitalize;
+         letter-spacing: 0.25rem;
+         display: block;
+         transition: all 0.3s linear;
+         font-weight: bold;
+         padding: 0.75rem 0;
+     }
+     
+     .links a:hover {
+         color: rgb(126, 125, 125);
+     }
+     
+     @media screen and (min-width: 800px) {
+         h1 {
+             font-size: 4rem;
+         }
+         nav {
+             background: transparent;
+         }
+         .nav-center {
+             width: 90vw;
+             max-width: 1170px;
+             margin: 0 auto;
+             display: flex;
+             align-items: center;
+             justify-content: space-between;
+         }
+         .nav-header {
+             padding: 0;
+         }
+         .nav-toggle {
+             display: none;
+         }
+         .links-container {
+             height: auto !important;
+         }
+         .links {
+             display: flex;
+         }
+         .links a {
+             background: transparent;
+             color: white;
+             font-size: 1.1rem;
+             text-transform: capitalize;
+             letter-spacing: 0.25rem;
+             transition: all 0.3s linear;
+             display: block;
+             margin: 0 1rem;
+             font-weight: bold;
+             padding: 0;
+         }
+         .links a:hover {
+             color: rgb(236, 230, 230);
+         }
+     }
+     
+     header {
+         min-height: 100vh;
+         background: linear-gradient(rgba(62, 170, 173, 0.5), rgba(0, 0, 0, 0.7)), url(./hero-bcg.jpeg) center/cover no-repeat;
+     }
+     
+     .banner {
+         min-height: 100vh;
+         display: grid;
+         place-items: center;
+         text-align: center;
+     }
+     
+     .container h1 {
+         color: white;
+         text-transform: uppercase;
+     }
+     
+     .container p {
+         color: white;
+         max-width: 25rem;
+         margin: 0 auto;
+         margin-bottom: 1.25rem;
+     }
+     
+     .container .btn-white {
+         text-transform: uppercase;
+         color: white;
+         border: 2px solid white;
+         padding: 0.5rem 1rem;
+         transition: all 0.3s linear;
+         letter-spacing: 0.25rem;
+     }
+     
+     .btn:hover {
+         background: white;
+         color: #39A894;
+     }
+     
+     @media screen and (min-width: 768px) {
+         .container p {
+             max-width: 40rem;
+         }
+     }
+     
+     .title h2 {
+         text-align: center;
+         text-transform: uppercase;
+     }
+     
+     .title span {
+         color: rgb(7, 151, 120);
+     }
+     
+     #about,
+     #services,
+     #tours {
+         height: 80vh;
+     }
+     
+     #services {
+         background: rgb(243, 240, 240);
+     }
+     
+     footer {
+         background-color: rgb(6, 41, 61);
+         padding: 5rem 1rem;
+     }
+     
+     footer p {
+         color: rgb(241, 237, 237);
+         text-align: center;
+         text-transform: capitalize;
+         letter-spacing: 0.25rem;
+         margin-bottom: 0;
+     }
+     
+     .top-link {
+         text-decoration: none;
+         font-size: 1.25rem;
+         position: fixed;
+         bottom: 3rem;
+         right: 3rem;
+         background: #39A894;
+         width: 2rem;
+         height: 2rem;
+         display: grid;
+         place-items: center;
+         border-radius: 0.5rem;
+         color: rgb(247, 241, 241);
+         animation: bounce 2s ease-in-out infinite;
+         visibility: hidden;
+         z-index: -100;
+     }
+     
+     .show-link {
+         visibility: visible;
+         z-index: 100;
+     }
+     
+     @keyframes bounce {
+         0% {
+             transform: scale(1);
+         }
+         50% {
+             transform: scale(1.5);
+         }
+         100% {
+             transform: scale(1);
+         }
+     }
